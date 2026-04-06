@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+jobs:
+  build-and-smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Compile Python
+        run: |
+          python -m compileall -q .
+
+      - name: Smoke test Flask routes
+        env:
+          DATABASE_URL: ""
+        run: |
+          python - <<'PY'
+          from backend.server import app
+
+          client = app.test_client()
+          res = client.get("/api/health")
+          assert res.status_code == 200, res.data
+          assert res.get_json() == {"status": "ok"}
+
+          res = client.post("/api/visit")
+          assert res.status_code == 200
+          assert "visitors" in (res.get_json() or {})
+
+          res = client.post(
+              "/api/contact",
+              json={"name": "Test User", "email": "test@example.com", "message": "Hello"}
+          )
+          assert res.status_code in (200, 201), res.data
+          assert (res.get_json() or {}).get("ok") is True
+
+          res = client.get("/api/contacts")
+          assert res.status_code == 200
+          assert isinstance((res.get_json() or {}).get("contacts"), list)
+
+          print("Smoke tests passed.")
+          PY
+
