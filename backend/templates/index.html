@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glen | Portfolio</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Glen<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Glen</span></h1>
+            <p class="tagline">Full Stack Developer | Problem Solver | Tech Enthusiast</p>
+            <p class="description">I build modern web applications with clean code and electric, futuristic user experiences.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:stephen@example.com">Email</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="profile-photo-wrapper">
+                <img src="img/WhatsApp Image 2026-03-31 at 8.28.58 PM.jpeg" alt="Glen profile photo" class="profile-photo">
+                <div class="glow-ring"></div>
+            </div>
+            <div class="code-block">
+                <pre><code>&lt;developer&gt;
+  name: "Glen"
+  passion: "Building Things"
+  skills: ["Frontend", "Backend", "Database"]
+&lt;/developer&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm Glen, a passionate developer who loves creating digital solutions that make a difference. I specialize in building full-stack web applications using modern technologies.</p>
+                    <p>My journey in tech started with curiosity about how websites work, and it has evolved into a deep passion for software development. I believe in writing clean, maintainable code and creating intuitive user experiences.</p>
+                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="visitor-count">0</span>
+                        <span class="stat-label">Site Visitors</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Frontend Development</h3>
+                    <p>HTML5, CSS3, JavaScript, React</p>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Backend Development</h3>
+                    <p>Node.js, Express, Python, APIs</p>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Database</h3>
+                    <p>MySQL, SQLite, MongoDB</p>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔧</div>
+                    <h3>Tools & DevOps</h3>
+                    <p>Git, GitHub, VS Code, Linux</p>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image"><div class="project-placeholder">🌐</div></div>
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>A full-stack portfolio website with Python backend and SQLite database for contact management.</p>
+                        <div class="project-tech"><span>HTML/CSS</span><span>JavaScript</span><span>Flask</span><span>SQLite</span></div>
+                        <div class="project-links"><a href="#" class="project-link">Live Demo</a><a href="#" class="project-link">GitHub</a></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"><div class="project-placeholder">📝</div></div>
+                    <div class="project-info">
+                        <h3>Task Manager App</h3>
+                        <p>A productivity application to manage tasks with categories, deadlines, and progress tracking.</p>
+                        <div class="project-tech"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+                        <div class="project-links"><a href="#" class="project-link">Live Demo</a><a href="#" class="project-link">GitHub</a></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"><div class="project-placeholder">🛒</div></div>
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Online shopping platform with user authentication, cart functionality, and payment integration.</p>
+                        <div class="project-tech"><span>JavaScript</span><span>Express</span><span>MySQL</span></div>
+                        <div class="project-links"><a href="#" class="project-link">Live Demo</a><a href="#" class="project-link">GitHub</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's work together!</h3>
+                    <p>I'm currently open to freelance projects and full-time opportunities. Feel free to reach out if you have a project in mind or just want to connect.</p>
+                    <div class="contact-details">
+                        <div class="contact-item"><span class="contact-icon">📧</span><span>stephen@example.com</span></div>
+                        <div class="contact-item"><span class="contact-icon">📍</span><span>Your Location</span></div>
+                        <div class="contact-item"><span class="contact-icon">🔗</span><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub Profile</a></div>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Hello Glen, I'd like to..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div id="cstat" class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Glen. All rights reserved.</p>
+            <p>Built using HTML, CSS, JavaScript, Python (Flask) & SQLite</p>
+        </div>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
+

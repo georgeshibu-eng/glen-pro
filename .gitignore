@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+
+# Local DB
+portfolio.sqlite3
+
+# Env vars
+.env
+
+# OS files
+Thumbs.db
+.DS_Store
+
